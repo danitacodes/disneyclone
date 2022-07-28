@@ -7,6 +7,17 @@ const Login = () => {
         <Content>
             <CTA>
                 <CTALogoOne src="https://cnbl-cdn.bamgrid.com/assets/73855ecdad3fbc99c89bb2c1d21be651b543ff1fc2371c8dddfe146629e2bea0/original" alt="Hulu, Disney+, ESPN+ Bundle"/>
+                <Create>Enter your email to create or restart your subscription.</Create>
+                <CTAForm>
+                    <input type="email" className="email" placeholder='Email'/>
+                <button className="bundle">GET THE DISNEY BUNDLE</button>
+                </CTAForm>
+                <Stream>Stream now.   
+                    <a href='#' className='link'>Terms Apply</a>
+                </Stream>
+                <CTALogoTwo src="https://cnbl-cdn.bamgrid.com/assets/8349a1f652e69bf1c3685a888092435110056a55e27b4eac3289e10fcb232978/original" alt="Disney, Pixar, Marvel, Star Wars, National Geographic Logo" />
+                <OtherPlan>View Other Plan Options</OtherPlan>
+                <CTADown src="http://www.w3.org/2000/svg"/>
             </CTA>
             <BgImage />
         </Content>
@@ -69,6 +80,105 @@ const CTALogoOne = styled.img`
     display: block;
     width: 100%;
 `
+const Create = styled.p`
+    width: 100%;
+    color: silver;
+    font-size: 16px;
+    margin: 0 0 24px;
+    line-height: 26px;
+    font-weight: 400;
+    text-align: center;
+    justify-content: center;
+`
+const CTAForm = styled.div`
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    @media only screen and (max-width: 479px) {
+        display: inline-flex;
+        flex-direction: column;
+    }
 
+    .email {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #31343e;
+        border: 1px solid #31343e;
+        height: 50px;
+        padding: 0 12px;
+        border-radius: 4px;
+        color: silver;
+        display: inline-flex;
+        font-size: inherit;
+        vertical-align: middle;
 
+        @media only screen and (max-width: 479px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .bundle {
+    margin-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: unset;
+    height: 50px;
+    width: 100%;
+    background-color: #0063e5;
+    border: none;
+    color: #f9f9f9;
+    align-items: center;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    transition: all .2s ease 0s;
+    vertical-align: middle;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 15px;
+
+    &:hover {
+        background-color: #0483ee;
+    }
+    }
+`
+
+const Stream = styled.span`
+    font-size: 12px;
+    color: silver;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .link {
+        text-decoration: underline;
+    }
+`
+
+const CTALogoTwo = styled.img`
+    margin-bottom: 10px;
+    max-width: 600px;
+    min-height: 1px;
+    display: block;
+    width: 100;
+`
+
+const OtherPlan = styled.span`
+    text-decoration: underline;
+    padding-top: 25px;
+    font-size: 18px;
+`
+
+const CTADown = styled.svg`
+    width: 49px;
+    height: 48px;
+    fill: #f9f9f9;;
+    pointer-events: none;
+
+`
+ 
 export default Login
